@@ -9,3 +9,4 @@
 9. selection_sort
 10. quick_sort
 11. heap_sort
+12. calculator
