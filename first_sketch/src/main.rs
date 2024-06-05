@@ -20,34 +20,34 @@ fn model(_app: &App)->Model {
     }
 }
 
-fn update(_app: &App, _model: &mut Model, _update: Update){
-    _model.speed += 1.0;
-    if _model.speed > _app.window_rect().right() {
-        _model.speed = _app.window_rect().left();
+fn update(app: &App, model: &mut Model, _update: Update){
+    model.speed += 1.0;
+    if model.speed > app.window_rect().right() {
+        model.speed = app.window_rect().left();
     }
     
-    _model.red += 0.01;
-    if _model.red > 1.0 {
-        _model.red = 0.0;
+    model.red += 0.01;
+    if model.red > 1.0 {
+        model.red = 0.0;
     }
     
-    _model.green += 0.01;
-    if _model.green > 1.0 {
-        _model.green = 0.0;
+    model.green += 0.01;
+    if model.green > 1.0 {
+        model.green = 0.0;
     }
     
-    _model.blue += 0.01;
-    if _model.blue > 1.0 {
-        _model.blue = 0.0;
+    model.blue += 0.01;
+    if model.blue > 1.0 {
+        model.blue = 0.0;
     }
 }
 
-fn view(_app: &App, _model: &Model, frame: Frame){
+fn view(app: &App,model: &Model, frame: Frame){
     frame.clear(PURPLE);
 
-    let draw = _app.draw();
+    let draw = app.draw();
     // draw.background().color(PLUM);
-    draw.background().color(rgb(_model.red, _model.green, _model.blue));
-    draw.ellipse().color(MAGENTA).w(100.0).h(100.0).x(_model.speed);
-    draw.to_frame(_app, &frame).unwrap();
+    draw.background().color(rgb(model.red, model.green, model.blue));
+    draw.ellipse().color(MAGENTA).w(100.0).h(100.0).x(model.speed);
+    draw.to_frame(app, &frame).unwrap();
 }
