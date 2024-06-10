@@ -1,6 +1,7 @@
 mod task;
 
 use task::Task;
+use task::Summary;
 use std::io::{self, Write};
 
 fn main() {
@@ -16,7 +17,8 @@ fn main() {
         println!("\nOptions:");
         println!("1. Add a task");
         println!("2. Delete a task");
-        println!("3. Quit");
+        println!("3. Print summary of tasks");
+        println!("4. Quit");
 
         print!("Enter your choice: ");
         io::stdout().flush().unwrap();
@@ -44,7 +46,12 @@ fn main() {
                 let id: usize = id_input.trim().parse().expect("Please enter a valid number");
                 tasks.retain(|task| task.id != id);
             },
-            "3" => break,
+            "3" => {
+                for task in &tasks{ 
+                    println!("{}", task.summarize());
+                }
+            }
+            "4" => break,
             _ => println!("Invalid option. Please try again."),
         }
     }
