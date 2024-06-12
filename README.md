@@ -24,3 +24,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 20. todo_list
 21. file_io
 22. image_blur
+23. image_grayscale
