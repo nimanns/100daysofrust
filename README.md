@@ -1,3 +1,7 @@
+# 100 Days of Rust
+
+This is a personal project where I will do a little bit of Rust programming everyday for 100 days.
+
 1. factorial
 2. is_prime
 3. reverse_string
