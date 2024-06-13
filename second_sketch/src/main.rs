@@ -2,7 +2,6 @@ use nannou::{draw::Context, prelude::*};
 
 fn main() {
     nannou::sketch(view).run()
-        
 }
 
 fn view(app: &App, frame: Frame) {
