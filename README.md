@@ -26,3 +26,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 22. image_blur
 23. image_grayscale
 24. nannou_audio_sketch
+25. wave_generate
