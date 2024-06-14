@@ -29,3 +29,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 25. wave_generate
 26. term_visuals
 27. term_visuals_2
+28. wave_generate_tri
