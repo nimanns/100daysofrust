@@ -10,10 +10,19 @@ struct MyApp {
 
 impl epi::App for MyApp {
     fn name(&self) -> &str {
-        "Form App"
+        "Vibrant Form App"
     }
 
     fn update(&mut self, ctx: &egui::CtxRef, _frame: &mut epi::Frame) {
+        // Customize style for vibrant colors
+        let mut style = (*ctx.style()).clone();
+        style.visuals.widgets.noninteractive.bg_fill = egui::Color32::from_rgb(30, 30, 30); // Dark background for noninteractive widgets
+        style.visuals.widgets.active.bg_fill = egui::Color32::from_rgb(70, 130, 180); // Steel blue for active elements
+        style.visuals.widgets.inactive.bg_fill = egui::Color32::from_rgb(100, 149, 237); // Cornflower blue for inactive elements
+        style.visuals.widgets.hovered.bg_fill = egui::Color32::from_rgb(0, 191, 255); // Deep sky blue for hovered elements
+        style.visuals.selection.bg_fill = egui::Color32::from_rgb(255, 69, 0); // Orange red for selection background
+        ctx.set_style(style);
+
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("User Information Form");
 
