@@ -1,0 +1,9 @@
+[package]
+name = "gui_2"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.14"
+eframe = "0.14"
+
