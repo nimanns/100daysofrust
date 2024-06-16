@@ -32,3 +32,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 28. wave_generate_tri
 29. ansi
 30. gui
+31. gui 2
