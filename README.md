@@ -35,3 +35,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 31. gui 2
 32. scraper
 33. ping_pong
+34. async_one
