@@ -37,3 +37,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 33. ping_pong
 34. async_one
 35. clicker
+36. automated_readme
