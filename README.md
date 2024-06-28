@@ -38,3 +38,4 @@ This is a personal project where I will do a little bit of Rust programming ever
 34. async_one
 35. clicker
 36. automated_readme
+37. dyno
